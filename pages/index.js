@@ -27,6 +27,12 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            <em>
+              If this site looks young to you, remember to check its growth after 1 week, 1 month
+              and 1 year.
+            </em>
+          </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}

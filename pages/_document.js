@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render() {
+    // TODO update favicons
     return (
       <Html lang="en" className="scroll-smooth">
         <Head>

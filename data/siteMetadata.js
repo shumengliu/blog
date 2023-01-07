@@ -1,14 +1,14 @@
 const siteMetadata = {
   title: 'Shuyun the Wallfacer',
   author: 'Shumeng Liu',
-  headerTitle: 'ShuyunBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  headerTitle: 'Shuyun the Wallfacer',
+  description: 'Blog and portfolio of Shumeng Liu',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'www.shuyunthewf.com',
   siteRepo: 'https://github.com/HonestBook/blog',
   siteLogo: '/static/images/logo.png', // TODO get a new logo, maybe a cloud
-  image: '/static/images/avatar.png', // TODO get a new avatar
+  image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png', // TODO get a new banner
   email: 'honestbookofficial@gmail.com',
   github: 'https://github.com/HonestBook',
