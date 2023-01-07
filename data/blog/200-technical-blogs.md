@@ -7,6 +7,8 @@ summary:
 authors: ['default']
 ---
 
+# TODO finish this post
+
 # What I learnt from 200 great techincal blogs
 
 ## Technology stack

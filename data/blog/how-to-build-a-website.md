@@ -7,6 +7,8 @@ summary: 'In this article, I demonstrate how the website you are looking at is d
 authors: ['default']
 ---
 
+# TODO finish this post
+
 # Learn Next.js
 
 https://nextjs.org/learn/foundations/about-nextjs
