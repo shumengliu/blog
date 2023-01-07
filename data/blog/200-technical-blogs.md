@@ -1,0 +1,70 @@
+---
+title: What I learnt from 200 great techincal blogs
+date: to-be-published
+tags: ['frontend', 'blogging']
+draft: true
+summary:
+authors: ['shuyun']
+---
+
+# What I learnt from 200 great techincal blogs
+
+## Technology stack
+
+# Choose the framework
+
+## Next.js vs. Gatsby.js
+
+A typical blog is more of a static site, the content is not updated frequently.
+However, I want to display some 3rd-party data on my website. e.g. My GitHub history, Goodreads status etc.
+The way to achieve is to incorporate [Server-side Rendering](TODO) , and that is exactly where Next.js shines.
+
+## Factors to consider
+
+How often are updates made to the site?
+
+Next.js is more dynamic.
+Gatsby needs to rebuild the website every time an update is made.
+
+Gatsby uses pre-rendering whereas Next.js uses server-side rendering.
+https://www.youtube.com/watch?v=fuzPXzkfebo Ben Awad Video
+
+## Other options
+
+# Choose the hosting platform
+
+https://www.youtube.com/watch?v=DiBQZpb_al0
+This video is old but it put Zeit (now Vercel) in a very place.
+The question is Netlify now supports Next.
+How does Next on Netlify compares with Vercel?
+
+# Choose the post format
+
+Next.js tutorial uses markdown files with metadata at beginning of a file.
+Because it requires manual efforts to manage and parse the metadata using JavaScript. It feels like a sub-optimal solution.
+
+Fortunately, some good sites I looked through are open-source. And I learnt they often use MDX.
+So this is what I'm going for.
+https://github.com/farskid/farzadyz.com
+https://github.com/jakejarvis/jarv.is
+https://github.com/mbifulco/blog
+
+## My starting template
+
+https://github.com/timlrx/tailwind-nextjs-starter-blog
+
+## Difference between markdown and MDX
+
+farzadyz uses MDX
+
+## Type of Content
+
+## Presentation
+
+## Intersting stuff
+
+A lot of them are using Mastodon over Twitter.
+
+## More impressive ones
+
+## Mention my GitHub repo on that
