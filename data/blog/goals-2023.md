@@ -1,6 +1,6 @@
 ---
 title: My GOALS in 2023
-date: to be published
+date: '2023-01-01'
 tags: ['personal', 'goals']
 draft: true
 summary: 'My goals in 2023.'

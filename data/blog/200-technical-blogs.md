@@ -1,6 +1,6 @@
 ---
 title: What I learnt from 200 great techincal blogs
-date: to-be-published
+date: '2023-01-01'
 tags: ['frontend', 'blogging']
 draft: true
 summary:
