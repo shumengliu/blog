@@ -4,7 +4,7 @@ date: '2023-01-01'
 tags: ['personal', 'goals']
 draft: true
 summary: 'My goals in 2023.'
-authors: ['Shumeng Liu']
+authors: ['default']
 ---
 
 # Goals of 2023

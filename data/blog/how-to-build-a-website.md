@@ -4,7 +4,7 @@ date: '2023-01-01'
 tags: ['next js', 'how to', 'web dev']
 draft: true
 summary: 'In this article, I demonstrate how the website you are looking at is developed.'
-authors: ['shumeng liu']
+authors: ['default']
 ---
 
 # Learn Next.js

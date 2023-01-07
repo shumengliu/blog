@@ -4,7 +4,7 @@ date: '2023-01-01'
 tags: ['personal', 'blogging']
 draft: true
 summary: My 2022 Year in Review.
-authors: ['shuyun']
+authors: ['default']
 ---
 
 # TODO consider change this into a more brief english version
