@@ -1,12 +1,18 @@
 const projectsData = [
   // TODO add my projects here
+  // TODO Lynx Bank
+  // TODO Buddy Scheme
+  // TODO Note if it is a outside link, start with https://
+  // TODO The WHILE language compiler
+  // - [This site](https://github.com/httom123/TeamTiger)
+  // - [Lynx Bank](https://github.com/RoundofThree/lynx)
+  // - [Buddy Scheme](https://github.com/httom123/TeamTiger)
+  // - KCLCSSA WeChat Mini Program
   {
-    title: 'Some project I did',
-    description: `Something very cool.
-    It does fantastic job.
-    I love it..`,
-    imgSrc: '/static/images/google.png', // TODO get a image for this project
-    href: '/index', // TODO if it is a outside link, start with https://
+    title: 'Next.js Blog',
+    description: 'The site you are visiting now',
+    imgSrc: '/static/images/projects/nextjs.png',
+    href: 'https://github.com/HonestBook/blog',
   },
 ]
 

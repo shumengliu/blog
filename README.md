@@ -258,6 +258,13 @@ Apart from changes mentioned above for `next/image`, configurations should be ch
 
 Using the template? Support this effort by giving a star on GitHub, sharing your own blog and giving a shoutout on Twitter or becoming a project [sponsor](https://github.com/sponsors/timlrx).
 
+# TODO include a TODO list for this site
+
+- TODO support RSS feed subscription
+- TODO send subscription confirmation email
+- TODO enable comments
+- TODO have a better way to manage the million links in this site
+
 ## Licence
 
 [MIT](https://github.com/timlrx/tailwind-nextjs-starter-blog/blob/master/LICENSE) © [Timothy Lin](https://www.timlrx.com)

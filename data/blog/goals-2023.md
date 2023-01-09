@@ -9,9 +9,9 @@ authors: ['default']
 
 # TODO finish this post
 
-# Goals of 2023
+# Goals for 2023
 
-- Have a job
+- Get a job
 - Have a girlfriend
 - Read 23 books
 - Learn to ride a bicycle
