@@ -6,12 +6,12 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'www.shuyunthewf.com',
-  siteRepo: 'https://github.com/HonestBook/blog',
-  siteLogo: '/static/images/logo.png', // TODO get a new logo, maybe a cloud
+  siteRepo: 'https://github.com/shumengliu/blog',
+  siteLogo: '/static/images/logo.png', // TODO get new favicons
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png', // TODO get a new banner
   email: 'honestbookofficial@gmail.com',
-  github: 'https://github.com/HonestBook',
+  github: 'https://github.com/shumengliu',
   linkedin: 'https://www.linkedin.com/in/shumeng-liu-932a9a201/',
   // TODO put more social meadia links
   // Chess.com

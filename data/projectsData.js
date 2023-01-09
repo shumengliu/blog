@@ -12,7 +12,7 @@ const projectsData = [
     title: 'Next.js blog',
     description: 'The site you are visiting now',
     imgSrc: '/static/images/projects/nextjs.png',
-    href: 'https://github.com/HonestBook/blog',
+    href: 'https://github.com/shumengliu/blog',
   },
 ]
 
