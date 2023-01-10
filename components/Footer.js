@@ -16,7 +16,6 @@ export default function Footer() {
           {/* <div>{` • `}</div> */}
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{siteMetadata.author}</div>
-          {/* TODO say something about the CC-BY-4.0 license */}
         </div>
         {/* TODO add github repo for this site */}
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">

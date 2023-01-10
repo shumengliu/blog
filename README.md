@@ -1,5 +1,3 @@
-# TODO Edit README
-
 # Tech Stack
 
 - [React](https://reactjs.org/)
