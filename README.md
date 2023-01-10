@@ -13,6 +13,7 @@ This site is deployed to [Netlify](https://www.netlify.com/).
 
 Learn how to build a site like this in my post
 [to be published](TODO)
+
 Learn more about how I decided to use Next.js in my post
 [to be published](TODO)
 
