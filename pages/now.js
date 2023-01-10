@@ -2,6 +2,7 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getFileBySlug } from '@/lib/mdx'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import Link from 'next/link'
 
 // TODO: Consider change this later
 const DEFAULT_LAYOUT = 'PostSimple'
