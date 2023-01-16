@@ -7,7 +7,7 @@
 
 This site is deployed to [Netlify](https://www.netlify.com/).
 
-# Recommend reading
+# Recommended Reading
 
 Learn how to build a site like this in my post
 [to be published](TODO)
@@ -15,7 +15,7 @@ Learn how to build a site like this in my post
 Learn more about how I decided to use Next.js in my post
 [to be published](TODO)
 
-# To-do list
+# To-do List
 
 - Enable comments
 - Enable RSS subscription
@@ -23,7 +23,7 @@ Learn more about how I decided to use Next.js in my post
 - Manage the links in this site better
 - Add i18n support
 
-# How to run the server locally
+# How to Run the Server Locally
 
 ### Prerequisite
 
@@ -35,7 +35,7 @@ Make sure you have Node.js with appropriate version (As of Jan 2023, at least No
 npm install
 ```
 
-### Run the development server
+### Run the Development Server
 
 ```bash
 npm run dev
