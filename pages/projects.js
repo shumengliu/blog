@@ -14,7 +14,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Learn more about my projects at&nbsp;
+            Learn more about my projects on&nbsp;
             <Link href={`${siteMetadata.github}`}>GitHub</Link>.
           </p>
         </div>
