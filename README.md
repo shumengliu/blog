@@ -22,6 +22,8 @@ Learn more about how I decided to use Next.js in my post
 - Send confirmation email upon subscription
 - Manage the links in this site better
 - Add i18n support
+- Add testing to this site
+- Consider using ESLint
 
 # How to Run the Server Locally
 
