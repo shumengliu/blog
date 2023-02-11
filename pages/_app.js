@@ -6,7 +6,7 @@ import '@fontsource/inter/variable-full.css'
 
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
-
+import Script from 'next/script'
 import siteMetadata from '@/data/siteMetadata'
 import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
@@ -28,4 +28,9 @@ export default function App({ Component, pageProps }) {
       </LayoutWrapper>
     </ThemeProvider>
   )
+}
+
+export function reportWebVitals(metric) {
+  console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID)
+  console.log(metric)
 }
