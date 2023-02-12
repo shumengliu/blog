@@ -20,6 +20,7 @@ const siteMetadata = {
 
   locale: 'en-US',
   analytics: {
+    // TODO check out other analytics
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
     // supports plausible, simpleAnalytics, umami or googleAnalytics

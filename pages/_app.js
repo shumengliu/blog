@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
   )
 }
 
-export function reportWebVitals(metric) {
-  console.log(process.env.NEXT_PUBLIC_ANALYTICS_ID)
-  console.log(metric)
-}
+// Web Vitals
+// export function reportWebVitals(metric) {
+//   console.log(metric)
+// }
