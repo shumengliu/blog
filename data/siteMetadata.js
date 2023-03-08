@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'Blog and portfolio of Shumeng Liu',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'www.shuyunthewf.com',
+  siteUrl: 'https://www.shuyunthewf.com',
   siteRepo: 'https://github.com/shumengliu/blog',
   siteLogo: '/static/images/logo.png', // TODO get new favicons
   image: '/static/images/avatar.png',
@@ -13,7 +13,7 @@ const siteMetadata = {
   email: 'honestbookofficial@gmail.com',
   github: 'https://github.com/shumengliu',
   linkedin: 'https://www.linkedin.com/in/shumeng-liu-932a9a201/',
-  // TODO put more social meadia links
+  // TODO put more social media links
   // Chess.com
   // Codeforces
   // Goodreads
