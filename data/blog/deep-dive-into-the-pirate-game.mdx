@@ -1,0 +1,270 @@
+---
+title: Deep Dive into the Pirate Game
+date: '2023-04-10'
+tags: ['game theory']
+draft: false
+summary: Explaining everything about the Pirate Game, a classic Game Theory problem.
+images: []
+layout: PostLayout
+canonicalUrl: the-pirate-game
+---
+
+# Motif
+
+I came across the Pirate Game first in high school as an introductory problem to game theory. The solution to which I found incredibly
+couter-intuitive yet elegant.
+
+To my surprise, after 5 years, I was asked this exact problem during an interview for a developer job. Thanks to my high school experience,
+I nailed the solution and impressed the interviewer.
+
+Now, I want to share this exicting game-theory problem with you. Buckle up!
+
+# The Game
+
+Amara is the captain of a pirate vessel. His mateys, Bart, Charlotte, Daniel, and Eliza, are the other
+members of the crew. The group has come upon a bounty of 100 coins coins, and now must divide it
+up among the group according to "the pirate's code".
+
+## The Pirate's Code
+
+The code stipulates that Amara, as captain, gets to suggest the first plan for distributing the coins
+among the five pirates. For example, 40 for Amara, 30 for Bart, 20 for Charlotte, 10 for Daniel and 0 for Eliza (sorry, Eliza).
+
+After that proposal, each pirate (including Amara) votes "yarr" or nay on
+whether to accept the proposal. If the proposal results in either **a tied vote
+or a majority of "yarrs"**, it passes and the coins are immediately distributed. If it fails to
+meet this threshold, Amara must walk the plank (in other words, face death), making Bart the next captain.
+A dead pirate is not eligible for future votes and coin disburals.
+
+This propose-and-vote process now repeats with Bart as captain, and the captain's hat will be passed on, in order, to
+Charlotte, Daniel, and finally Eliza. (If it gets all the way to Eliza without a passing proposal, she gets
+the booty.)
+
+## The Pirates' Rationale
+
+Each of the pirates act in a SELFISH and EXTREMELY RATIONAL way, their action obeys the following rules:
+
+1. Their highest priority is to stay alive.
+2. Their next priority is to maximise their gold horde.
+3. They are bloodthirsty, and would love to see a fellow pirate walk the plank if they think
+   it won't affect their own life and gold distribution.
+4. They distrust each other-there are no alliances and they cannot collaborate on a strategy.
+   Again, each pirate has excellent logical deduction skills, and they're aware that everyone has the same skills.
+
+## The Problem
+
+So we arrive at the key problem for Amara:
+
+**What distribution should he propose to ensure he lives and maximizes his own gold return?**
+
+Take some time to ponder your strategy before scolling down.
+
+# Solution
+
+For simplicity, we will refer to the pirates as A, B, C, D and E.
+
+## Observations
+
+According to Rule #1 in the Pirates' Rationale, A wants to gurantee that her proposal gets passed at all cost.
+
+One might consider a proposal where A leaves no coins for herself and gives each other pirate 25 coins.
+I would give a round of applause for the generosity behind such thinking. However, this plan does not maximise
+Amara's gold gain and the problem remains unsolved.
+
+In fact, to survive, A needs only 2 "yarrs" from other pirates (with a vote from A himself, 3 votes makes the majority for 5 pirates).
+So she needs to bribe 2 other pirates only.
+
+Thus, the problem becomes: what is the minimum amount of coins required for each of B, C, D and E to vote "yarr"?
+If we can answer this question, Amara would bribe two of them with the least needs.
+
+## More Observations
+
+According to the Pirate's Code, every pirate is aware that if the proposal from A gets
+rejected, B will take the captain's hat and make the next proposal.
+Because every pirate acts rationally and wants to maximise their gain, **they will only
+agree the proposal of A if and only if A is giving them more gold than B would.**
+
+Figuring out B's optimal proposal has no difference from figuring out A's, except there are only
+4 pirates left. Similarly, resolving B's proposal is not possible without knowing the proposal C would make.
+
+In other words, we should determine the captain's proposal for $n$ pirates before deducing the reactions of
+each pirate towards the captain of $n+1$ pirates.
+
+Take a moment to let the logic above sink in. Next, we will explore what each pirate thinks exactly in each scenario.
+
+## Working Backwards
+
+### E as the Captain
+
+As the only person on the vessel, E would give all 100 coins to herself. Unless E experiences a sudden moment
+of philosophical englightment realizing that life is all meaningless, the proposal would pass.
+
+However, we will soon learn that E will never become the captain (sorry, Eliza).
+
+### D as the Captain
+
+In this case, there are 2 pirates only, it is not hard to see D can force a tie no matter what he proposes.
+Therefore, he would give all 100 coins to himself, and E would reject, but the proposal gets passed anyway.
+
+Notice how when D is the captain, E gets absolutely nothing. This is a basis for further analysis.
+
+### C as the Captain
+
+Now the fun begins, as the captain, C needs another crew member to vote for her to win the
+majority. Because every pirate is very smart and rational, everyone is very well aware of the proposal that D would make.
+Most importantly, as we saw in the previous case, C and E acknowledges that **E would get no coins if the proposal gets rejected and D becomes the captain.**
+To win the vote from E, it is sufficient for C to give merely 1 coin to E.
+
+Therefore, C will make the proposal of giving 99 coins to herself, nothing to D and 1 coin to E.
+
+For E, getting only 1 coin is miserable, but it is better than the alternative—let D become captain and get 0.
+Hence E would say "yarrs". With another vote from the captain herself, the proposal gets passed.
+
+Choosing the correct crew member to bribe is thematic to the solution of the Pirate Game.
+Bribing E only takes one coin for C. In contrast, trying to bribe the beneficiaries of the disapproval of the proposal is way more difficult.
+In fact, even if C were to give all 100 coins to D, D would still reject the proposal because
+his bloodthirstiness (see Rule #3 in the Rationale).
+
+### B as the Captain
+
+This situtaion is similar to the previous one with C as the captain. As there are 4 pirates, B needs a vote from another pirate to force a tie.
+
+Everyone would recognize that if the proposal gets rejected, C would get 99 coins and E would get 1.
+If B gave E 1 coin, because the pirates are bloodthirsty, E would not be satisfied, as she can get the same amount from C anyway.
+Again, B as the captain should choose the correct member to bribe. D would happily accept
+1 coin from B, because the alternative is get 0 coins when C becomes the captain.
+
+Therefore, B would propose giving 99 coins to himself, 0 to C, 1 to D, and 0 to E.
+B and D would agree while C and E would reject. The proposal would pass with a tie.
+
+### A as the Captain (Original Problem)
+
+Now we have all the information to resolve the case for Amara.
+As the captain of 5 pirates, she would need 2 votes from other crew members.
+A is aware that if B becomes captain, C and E would get nothing.
+Therefore 1 coin is sufficient to bribe each of them.
+
+**Amara will propose giving 98 coins to herself, 0 to B, 1 to C, 0 to D and 1 to E.
+A, C, and E would agree while B and D would reject. The proposal will pass.**
+
+And that, my dear reader, is the solution to the Pirate Game with 5 players.
+
+### Visualisation
+
+The following sketch illustrates the optimal coin distributions and voting results for each captain.
+
+![distributions](/static/images/blog/distributions.jpg)
+
+# Extension
+
+Above is the typical 5-pirate scenario of the Pirate Game. And that is also all my interviewer asked for.
+However, had we stopped here, I would not call this a "deep dive".
+
+It is not hard to notice the pattern for more than 5 pirates.
+The captain would give a coin to every other crew member and keep the rest for themselves.
+Hoever, when there are more than 200 pirates on the vessel, the problem is no longer about maximising the gold gain,
+but the desire to survive.
+
+## Noation
+
+We will use a slightly different annotation for this section. Suppose there are $n$
+pirates on the vessel; we will call them #$n$, #$n-1$, ..., #1 with decreasing captain priority. That is, #$n$ will be the first captain.
+We will refer to odd-numbered pirates with the pronoun "she" and even-numbered pirates with the pronoun "he".
+
+## Who Can Survive?
+
+Pirate #201 can survive. He achieves this by giving 1 coin to every odd-numbered pirate. He gets no money but got to stay alive,
+which we will learn soon is a privilege in itself.
+
+Similarly, Pirate #202 can survive by giving 1 coin to every pirate with an even number.
+
+However, Pirate #203 will not be able to survive. She would need 102 votes to win. The 100 coins can only
+get 100 votes for her via bribing. Counting herself, she will be at 101 votes—1 vote short from survival.
+
+So, is 202 the maximum number of living pirates on the vessel? We should not jump to the conclusion so quickly.
+
+Interestingly, Pirate #204 actually gets to survive. Similar to #203, she would need 102 votes. In addition
+to the 101 votes #203 can get, **critically, he can get a free-of-charge vote from #203!** Because #203 knows, if #204
+gets voted off, she would not be able to survive either as the captain.
+
+Pirate #205 will not be able to survive. He can only get 101 votes because #203's survival issue is covered by #204, and nobody would voluntarily vote for her.
+
+Similarly, #206 and #207 cannot survive.
+
+Pirate #208 is able to survive. Because he gets 3 free votes from #205, #206 and #207, who deseprately want to survive. Therefore #208 can get
+104 votes and force a tie.
+
+## Who Else Can Survive?
+
+Who is the next captain that can get their proposal to pass? #216. He will get 100 votes from coins, and 8 votes from #209 through #216.
+This makes up the needed 108 votes to force a tie.
+
+So far, we learnt #201, #202, #204, #208 and #216 are capable of making their proposals pass. Do you notice a pattern here?
+Indeed, the numbers of those captains (including #201 and #202) follows the pattern $200 + 2^k$, where k is a non-negative integer.
+
+Out of nowhere, the power of 2 appeared in the expression. This is another counter-intuitive and fun part of this problem.
+We can illustrate this in the following sketch.
+
+![power-of-2](/static/images/blog/power-of-2.png)
+
+Any pirate who does not have survival issue will reject the proposal out of their bloodthirstiness. The other pirates will
+deseprately vote for the incumbent captain to keep themselves alive. Since half of the crew's votes
+is needed for the proposal to pass.
+
+Eventually, there will be enough new joiners to protect a new captain. Afterward,
+they all turn into auto-reject machines to vote against higher-numbered captains. **Therefore, every time a new captain emerges,
+the voluntary voting crew has to double in size, hence the power of 2.**
+
+## Determine the Bribable Pirates
+
+In the 5-pirate scenario, we discussed the pattern: odd-numbered captains would
+bribe odd-numbered crews and even-numbered captain would bribe even-numbered
+crews. Let's investigate whether this still holds for 200+ pirates.
+
+#201 has to give coins to odd-numbered pirates, because all the even-numbered
+pirates would receive a coin from #200.
+
+#202 is in a pretty similar spot, she also needs 101 votes to survive. The odd-numbered pirates in the range #1-#200 are harder
+to bribe, because they will get gold from #201 anyway. So #202 will likely bribe the even-numbered pirates.
+But she has (just a little bit) more freedom than that. Notice how when #201 is the captain, he gets no money left for himself.
+Therefore, #201 is also willing to say "yarr" for the price of 1 coin. #202 can
+choose 100 pirates out of the 101 candidates and give 1 coin each.
+
+Following this train of thought, one would argue #204 has to bribe odd-numbered crews. But now he has a lot more freedom. In fact,
+**any pirate** in the range #1-#202 is his candidate. Because #202 had the freedom to pick 100 pirates out of 101.
+The expected return for any even-numbered pirate in the range #1-#200 is 100/101 coins, which is just
+slightly under 1 coin. Therefore, when given the chance to get 1 full coin from #204, they no longer have to pray for chances and would happily vote for him.
+
+# General Form Solution
+
+We now outline the survival chances and gold distribution for the pirates when
+the number of pirates and gold coins vary.
+Suppose $N$ pirates are dividing $G$ gold coins among them.
+
+## Scenario I: $N \le 2G + 2$
+
+- Every pirate can survive.
+- The captain will get $G - (N - 2) / 2$ coins.
+- Other pirates whose numebr has the same parity as the captain will get 1 coin.
+
+## Scenario II: $N > 2G$
+
+- Pirates up to $2G + M$ can survive. Where M is the greatest power of 2 up to $N - 2G$.
+- The captain will not get any coins.
+- Pirates who are _bribable_ has an equal chance, $\frac{G}{|bribable|}$, to get 1 coin. For a captain numbered $C$, the bribable pirates are as follows.
+  - $C = 2G + 1$: Odd-numbered pirates up to $2G$ are bribable.
+  - $C = 2G + 2$: Even-numbered pirates up to $2G$, and #$2G + 1$ are bribable.
+  - $C \ge 2G + 4$: All pirates up to $2G + M / 2$ are bribable.
+
+# Endnote
+
+As a side note, this problem serves as an excellent choice for software engineer interviews,
+as the process of working out other captains' proposals closely resembles the concept of recursion.
+
+The solution of the Pirate Game struck me as counter-intuitive because I did not expect
+Amara to get as much as 98 coins for herself. This is all possible because they know
+**every pirate is so rational and emotionless that gaining just one coin outweights any frustration and anger
+caused by such a minuscule amount.**
+
+After all, the Pirate Game is just a game theory exercise that, like many other game-theory problems, may not perfectly represent the real-world behaviours.
+Often, it is the overlooked human emotions that become the deciding factor in similar situations.
