@@ -39,12 +39,13 @@
     "remark-footnotes": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
-    "sharp": "^0.28.3",
+    "sharp": "^0.32.0",
     "tailwindcss": "^3.0.23",
     "unist-util-visit": "^4.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.1.2",
+    "@types/react": "^18.0.1",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
     "eslint": "^7.29.0",
@@ -60,7 +61,8 @@
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.4",
     "socket.io": "^4.4.0",
-    "socket.io-client": "^4.4.0"
+    "socket.io-client": "^4.4.0",
+    "typescript": "^5.0.4"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
