@@ -3,19 +3,11 @@
     "target": "es5",
     "baseUrl": ".",
     "paths": {
-      // "@/css/*": [
-      //   "css/*"
-      // ],
-      // "@/data/*": [
-      //   "data/*"
-      // ],
-      // "@/components/*": [
-      //   "components/*"
-      // ],
-      // "@/lib/*": [
-      //   "/*"
-      // ],
-      "@/*": ["/*"]
+      "@/*": ["/*"],
+      "@/css/*": ["css/*"],
+      "@/components/*": ["components/*"],
+      "@/data/*": ["data/*"],
+      "@/lib/*": ["lib/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

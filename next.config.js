@@ -54,7 +54,7 @@ const securityHeaders = [
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   eslint: {
     dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
