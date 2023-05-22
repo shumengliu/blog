@@ -34,6 +34,9 @@ export async function getServerSideProps() {
   // TODO extract chess.com username into siteMetadata
   const apiUrl = 'https://api.chess.com/pub/player/wallfacer/stats'
 
+  // TODO add codeforces rating
+  // TODO add fastest Rubik's Rube solve (WCA api)
+
   try {
     const response = await axios.get(apiUrl)
     const data = response.data
