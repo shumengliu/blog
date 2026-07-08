@@ -6,6 +6,13 @@ const projectsData = [
   // - [Buddy Scheme](https://github.com/httom123/TeamTiger)
   // - KCLCSSA WeChat Mini Program
   {
+    title: 'Engineering Quest',
+    description:
+      'Your engineering work, told as an adventure — an AI Narrator turns plain reports into a living quest journal.',
+    imgSrc: '/static/images/projects/engineering-quest.png',
+    href: 'https://engineering-quest-dun.vercel.app/',
+  },
+  {
     title: 'Complate',
     description: 'A CLI tool for COMplete text temPLATES built with Rust.',
     imgSrc: '/static/images/projects/rust.png',
