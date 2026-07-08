@@ -8,7 +8,7 @@ const siteMetadata = {
   siteUrl: 'https://www.shuyunthewf.com',
   siteRepo: 'https://github.com/shumengliu/blog',
   siteLogo: '/static/images/logo.png', // TODO get new favicons
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png', // TODO get a new banner
   email: 'honestbookofficial@gmail.com',
   github: 'https://github.com/shumengliu',
